@@ -11,7 +11,7 @@ class App extends Component {
     this.state ={
       albums: null,
       loading: true,
-      searchValue: 'abba'
+      searchValue: ''
     }
     
     this.handleChange = this.handleChange.bind(this);
@@ -29,12 +29,13 @@ class App extends Component {
   }
 
   async componentDidMount(){
-    this.makeRequest()
+    // this.makeRequest()
   }
 
   async makeRequest(){
+    let params = this.state.searchValue
 
-    const api_URL = `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${this.state.searchValue}&api_key=f94d5b07fba72d6e014d0844423a1fd4&format=json`
+    const api_URL = `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${params}&api_key=f94d5b07fba72d6e014d0844423a1fd4&format=json`
     const response = await fetch(api_URL)
     const data = await response.json()
     const albums = await data.topalbums.album
