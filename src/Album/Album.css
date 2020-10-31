@@ -1,0 +1,34 @@
+.Artist-name {
+    font-size: 16px;
+    margin-right: 4px;
+    text-align: left;
+    margin-left: 4px;
+}
+
+.Album-name {
+    font-size: 22px;
+    margin-left: 4px;
+    text-align: left;
+    width: 200px;
+    word-break: normal;
+}
+
+.Album-photo {
+    width: 200px;
+    height: 200px;
+}
+
+.Album-card {
+    width: 200px;
+    height: 260px;
+    margin: 15px 15px 15px 15px;
+}
+
+.Album-content {
+    margin-left: 4px;
+    text-align: left;
+    width: 200px;
+    position: absolute;
+    white-space: nowrap;
+    clip: rect(0px, 196px, 200px, 0px);
+}
